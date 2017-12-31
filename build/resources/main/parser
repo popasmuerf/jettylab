@@ -1,0 +1,21 @@
+{
+  "parser": "pfsense",
+  "mdtsdb": {
+    "mdtsdbUrl":"mdtsdb-4.fractal",
+    "mdtsdbPort":8080,
+    "clAdmKey": "ApkdHBJdvIfEPE",
+    "clAdmSecretKey": "clAdmSecretKey",
+    "swimlane": {
+      "name": "pfsense-00",
+      "appKey": "nHYWRjlFXp",
+      "secretKey": "YjRX2qHykv2k3J"
+    }
+  },
+  "kafka": {
+    "zkquorum": "10.0.2.118:2181",
+    "topic": "conmon-host-logs",
+    "group": "log-handler",
+    "broker": "10.0.2.11:1025",
+    "numThreads": 1
+  }
+}
