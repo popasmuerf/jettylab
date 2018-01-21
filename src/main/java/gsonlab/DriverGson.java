@@ -1,6 +1,5 @@
 package gsonlab;
-import DAOjava.Fuck;
-import DAOjava.Student  ;
+import DAOjava.Student;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import java.io.*;
@@ -19,16 +18,18 @@ import java.util.stream.Stream;
 public class DriverGson {
     static String jsonStr = null;
     static String filePath = "/Users/mdb/src10/lab/actors/jettylab/src/main/resources/student0";
+    static String filePath1 = "/Users/mdb/src10/lab/actors/jettylab/src/main/resources/parser";
     ArrayList<String> arrayList = new ArrayList<String>() ;
 
     public static void main(String[] args) {
-       String fuck =  readLineByLineJava8(filePath);
-       //System.out.println(fuck);
+       String jsonstr=  readLineByLineJava8(filePath);
+       String jsonstr1 = readLineByLineJava8(filePath1);
         GsonBuilder builder = new GsonBuilder();
         builder.setPrettyPrinting();
         Gson gson = builder.create();
-        Student student = gson.fromJson(fuck,Student.class);
-
+        Student student = gson.fromJson(jsonstr,Student.class);
+        
+        System.out.println(student.getAge());
 
     }
 

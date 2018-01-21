@@ -1,7 +1,7 @@
 package DAOjava;
 
 
-class Student {
+public class Student {
     private String name;
     private int age;
     public Student(){}
